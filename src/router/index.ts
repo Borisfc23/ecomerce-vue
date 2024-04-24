@@ -14,7 +14,7 @@ const routes: Array<RouteRecordRaw> = [
     component: DefaultLayout,
     children: [
       {
-        path: "/home",
+        path: "/",
         name: "home",
         component: index,
       },
@@ -43,7 +43,7 @@ const routes: Array<RouteRecordRaw> = [
         name: "details",
         component: Details,
       },
-      { path: "/:pathMatch(.*)*", component: index },
+      { path: "/:pathMatch(.*)*", component: DefaultLayout },
     ],
   },
   {
