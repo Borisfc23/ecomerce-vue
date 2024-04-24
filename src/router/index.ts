@@ -43,18 +43,18 @@ const routes: Array<RouteRecordRaw> = [
         name: "details",
         component: Details,
       },
-      {
-        path: "/:catchAll(.*)",
-        redirect: () => {
-          return { name: "home" };
-        },
-      },
     ],
   },
   {
     path: "/checkout",
     name: "checkout",
     component: Checkout,
+  },
+  {
+    path: "/:catchAll(.*)",
+    redirect: () => {
+      return { name: "home" };
+    },
   },
 ];
 const router = createRouter({
