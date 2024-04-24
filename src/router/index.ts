@@ -50,12 +50,7 @@ const routes: Array<RouteRecordRaw> = [
     name: "checkout",
     component: Checkout,
   },
-  {
-    path: "/:catchAll(.*)",
-    redirect: () => {
-      return { name: "home" };
-    },
-  },
+  { path: "/:pathMatch(.*)*", component: index },
 ];
 const router = createRouter({
   history: createWebHistory("/"),
