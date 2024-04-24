@@ -10,11 +10,11 @@ import DefaultLayout from "../components/DefaultLayout.vue";
 import Checkout from "../pages/Checkout.vue";
 const routes: Array<RouteRecordRaw> = [
   {
-    path: "/",
+    path: "/home",
     component: DefaultLayout,
     children: [
       {
-        path: "/",
+        path: "/home",
         name: "home",
         component: index,
       },
@@ -58,7 +58,7 @@ const routes: Array<RouteRecordRaw> = [
   },
 ];
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory("/"),
   routes,
 });
 
