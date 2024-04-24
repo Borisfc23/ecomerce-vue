@@ -43,6 +43,7 @@ const routes: Array<RouteRecordRaw> = [
         name: "details",
         component: Details,
       },
+      { path: "/:pathMatch(.*)*", component: index },
     ],
   },
   {
@@ -50,7 +51,6 @@ const routes: Array<RouteRecordRaw> = [
     name: "checkout",
     component: Checkout,
   },
-  { path: "/:pathMatch(.*)*", component: index },
 ];
 const router = createRouter({
   history: createWebHistory(),
