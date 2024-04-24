@@ -10,11 +10,11 @@ import DefaultLayout from "../components/DefaultLayout.vue";
 import Checkout from "../pages/Checkout.vue";
 const routes: Array<RouteRecordRaw> = [
   {
-    path: "/home",
+    path: "/",
     component: DefaultLayout,
     children: [
       {
-        path: "/",
+        path: "/home",
         name: "home",
         component: index,
       },

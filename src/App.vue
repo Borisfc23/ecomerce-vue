@@ -6,10 +6,4 @@
   </v-app>
 </template>
 
-<script lang="ts" setup>
-import { onMounted } from "vue";
-import router from "./router";
-onMounted(() => {
-  router.push("/home");
-});
-</script>
+<script lang="ts" setup></script>
