@@ -262,6 +262,7 @@ watchEffect(() => {
 
 onMounted(() => {
   products.value = store.cart;
+  window.scrollTo(0, 0);
 });
 
 const goToCart = () => {

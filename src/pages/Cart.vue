@@ -91,7 +91,7 @@
   <pre>{{ totalAcumulador }}</pre>
 </template>
 <script lang="ts" setup>
-import { computed, ref, watchEffect } from "vue";
+import { computed, onMounted, ref, watchEffect } from "vue";
 import router from "../router";
 import peticiones from "../store/index";
 const store = peticiones();
@@ -100,6 +100,11 @@ const products = computed(() => {
   return store.cart;
 });
 let totalAcumulador = ref(0);
+
+onMounted(() => {
+  window.scrollTo(0, 0);
+});
+
 watchEffect(() => {
   totalAcumulador.value = 0;
   products.value.map((item: any) => {

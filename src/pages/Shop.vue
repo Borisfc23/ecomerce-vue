@@ -32,9 +32,13 @@
 <script setup lang="ts">
 import Map from "../components/Map.vue";
 import CardShop from "../components/CardShop.vue";
-import { computed, ref } from "vue";
+import { computed, onMounted, ref } from "vue";
 
 const infoShopFat = ref("");
+
+onMounted(() => {
+  window.scrollTo(0, 0);
+});
 
 const shops = [
   {

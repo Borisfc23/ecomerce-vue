@@ -50,7 +50,7 @@
   <Download />
 </template>
 <script setup lang="ts">
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
 import Category from "../components/Category.vue";
 import Product from "../components/Product.vue";
 import Pack from "../components/Pack.vue";
@@ -59,6 +59,10 @@ import Partner from "../components/Partner.vue";
 import Download from "../components/Download.vue";
 import Header from "../components/Header.vue";
 const toggle_exclusive = ref(0);
+
+onMounted(() => {
+  window.scrollTo(0, 0);
+});
 </script>
 <style scoped>
 /* STYLE INDEX */

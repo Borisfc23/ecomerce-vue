@@ -180,7 +180,7 @@
   <pre>{{ product }}</pre>
 </template>
 <script lang="ts" setup>
-import { Ref, computed, ref } from "vue";
+import { Ref, computed, onMounted, ref } from "vue";
 import { IProduct } from "../interfaces/ProductInterface";
 import { useRoute } from "vue-router";
 import router from "../router";
@@ -189,7 +189,9 @@ import peticiones from "../store/index";
 const store = peticiones();
 
 const route = useRoute();
-
+onMounted(() => {
+  window.scrollTo(0, 0);
+});
 const products: Ref<Array<any>> = ref([]);
 products.value = store.products;
 const searchProduct = computed(() => {

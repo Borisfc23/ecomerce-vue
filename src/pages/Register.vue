@@ -83,10 +83,13 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
 
 const created = ref(false);
 const visible = ref(false);
+onMounted(() => {
+  window.scrollTo(0, 0);
+});
 </script>
 <style scoped>
 .title-register::after {
