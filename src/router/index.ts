@@ -10,11 +10,11 @@ import DefaultLayout from "../components/DefaultLayout.vue";
 import Checkout from "../pages/Checkout.vue";
 const routes: Array<RouteRecordRaw> = [
   {
-    path: "/",
+    path: "/home",
     component: DefaultLayout,
     children: [
       {
-        path: "/",
+        path: "/home",
         name: "home",
         component: index,
       },
@@ -42,6 +42,12 @@ const routes: Array<RouteRecordRaw> = [
         path: "/details/:id",
         name: "details",
         component: Details,
+      },
+      {
+        path: "/:catchAll(.*)",
+        redirect: () => {
+          return { name: "home" };
+        },
       },
     ],
   },
