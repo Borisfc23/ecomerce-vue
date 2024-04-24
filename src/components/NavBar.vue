@@ -4,7 +4,10 @@
       <v-img src="/1.png" cover width="30"></v-img>
     </v-badge>
     <v-toolbar-title class="ml-1">
-      <router-link to="/" style="text-decoration: none; font-size: 25px">
+      <router-link
+        :to="{ name: 'home' }"
+        style="text-decoration: none; font-size: 25px"
+      >
         <strong class="text-green">E</strong
         ><strong style="color: black">Comerce</strong>
       </router-link>
@@ -68,7 +71,7 @@ const items = [
   { title: "Login", path: "/login", icon: "fas fa-user" },
 ];
 const viewCart = () => {
-  router.push("/cart");
+  router.push({ name: "cart" });
 };
 watch(group, () => {
   drawer.value = false;

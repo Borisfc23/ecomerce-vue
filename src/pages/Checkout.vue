@@ -268,7 +268,7 @@ const goToCart = () => {
   router.push({ name: "cart" });
 };
 const goToHome = () => {
-  router.push("/");
+  router.push({ name: "home" });
 };
 const checkbox = ref(true);
 </script>

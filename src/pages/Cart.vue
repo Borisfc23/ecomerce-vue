@@ -107,10 +107,10 @@ watchEffect(() => {
   });
 });
 const goCheckout = () => {
-  router.push("checkout");
+  router.push({ name: "checkout" });
 };
 const goHome = () => {
-  router.push("/");
+  router.push({ name: "home" });
 };
 
 //REMOVE ITEM TO CART
