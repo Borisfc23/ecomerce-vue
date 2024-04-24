@@ -35,8 +35,8 @@ export default defineConfig({
     },
     extensions: [".js", ".json", ".jsx", ".mjs", ".ts", ".tsx", ".vue"],
   },
-  // server: {
-  //   port: 3001,
-  // },
-  base: "https://Borisfc23.github.io/ecomerce-vue/",
+  server: {
+    port: 3001,
+  },
+  // base: "https://Borisfc23.github.io/ecomerce-vue/",
 });
