@@ -43,7 +43,12 @@ const routes: Array<RouteRecordRaw> = [
         name: "details",
         component: Details,
       },
-      { path: "/:pathMatch(.*)*", component: index },
+      {
+        path: "/:catchAll(.*)",
+        redirect: () => {
+          return { name: "home" };
+        },
+      },
     ],
   },
   {
