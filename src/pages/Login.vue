@@ -53,16 +53,9 @@
     </v-card>
   </div>
 </template>
-<script>
-export default {
-  data: () => ({
-    visible: false,
-  }),
-};
-</script>
 <script setup lang="ts">
-import { onMounted } from "vue";
-
+import { onMounted, ref } from "vue";
+const visible = ref(false);
 onMounted(() => {
   window.scrollTo(0, 0);
 });
