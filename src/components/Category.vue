@@ -56,12 +56,12 @@ function toggleActive(index: number) {
   active.value = active.value.map((val, idx) => (idx === index ? !val : false));
 }
 const categories: Ref<Array<ICategories>> = ref<Array<ICategories>>([
-  { img: "/01.png", title: "Meat & Fish" },
-  { img: "/02.png", title: "Vegetables" },
-  { img: "/3.png", title: "Medicine" },
-  { img: "/4.png", title: "Baby" },
-  { img: "/5.png", title: "Office" },
-  { img: "/6.png", title: "Beauty" },
+  { img: "01.png", title: "Meat & Fish" },
+  { img: "02.png", title: "Vegetables" },
+  { img: "3.png", title: "Medicine" },
+  { img: "4.png", title: "Baby" },
+  { img: "5.png", title: "Office" },
+  { img: "6.png", title: "Beauty" },
 ]);
 </script>
 <style scoped>
